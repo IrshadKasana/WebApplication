@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- Roboto font from Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Roboto font */
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .error-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 350px;
+            text-align: center;
+        }
+        .error-icon {
+            color: #dc3545; /* Red color for the error icon */
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #dc3545;
+            margin-bottom: 10px;
+        }
+        .error-message {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 10px; /* Reduced space below error message */
+            line-height: 1.5; /* Adjusted line height for better readability */
+        }
+        .message-pane {
+            margin-top: 20px; /* Space above the message pane */
+            text-align: center; /* Center align text */
+        }
+        .message-pane p {
+            margin: 5px 0; /* Adjusted margin for paragraph elements */
+            font-style: italic; /* Italic font style */
+            opacity: 0.75; /* Transparent opacity */
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">
+            <i class="fas fa-exclamation-triangle"></i> <!-- Font Awesome error icon -->
+        </div>
+        <h2>Error</h2>
+        <p class="error-message">UID not found or already verified.</p>
+        <div class="message-pane">
+            <p>Check your UID and try again.</p>
+            <p>If you continue to have issues, please contact support.</p>
+        </div>
+    </div>
+</body>
+</html>

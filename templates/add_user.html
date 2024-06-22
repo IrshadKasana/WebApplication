@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .add-user-container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #0b3452;
+            margin-bottom: 20px;
+        }
+        form div {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #0b3452;
+        }
+        input[type="text"], input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 10px;
+            border: 3px solid #b0bec5;
+            border-radius: 15px;
+            font-size: 16px;
+        }
+        .button {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 5px;
+            cursor: pointer;
+            border: 2px solid #00796b;
+            border-radius: 25px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .button:hover {
+            background-color: white;
+            color: #00796b;
+        }
+        .hollow-button {
+            background-color: white;
+            color: #00796b;
+            border: 2px solid #00796b;
+            border-radius: 25px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .hollow-button:hover {
+            background-color: #00796b;
+            color: white;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="add-user-container">
+        <h2>Add User</h2>
+        <form method="post">
+            <div>
+                <label for="uid">U.I.D No </label>
+                <input type="text" id="uid" name="uid" required>
+            </div>
+            <div>
+                <label for="status">Status</label>
+                <input type="text" id="status" name="status" required>
+            </div>
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="business_ac">Business id</label>
+                <input type="number" id="business_ac" name="business_ac" required>
+            </div>
+            <div>
+                <button type="submit" class="button">Add User</button>
+            </div>
+        </form>
+        <div class="buttons">
+            <a href="{{ url_for('view_users') }}" class="hollow-button">View Main Table</a>
+            <a href="{{ url_for('view_company_users') }}" class="hollow-button">View Company Table</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 0;
+            height: 30vh; /* Adjusted height for better split */
+            position: relative;
+        }
+        .header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid white;
+            position: absolute;
+            top: calc(30vh - 50px); /* Adjusted position for 50/50 split */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+        .content h2 {
+            margin: 60px 0 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content h2 .verification-icon {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            color: #e89d13;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            width: 20px;
+            height: 20px;
+            font-size: 16px;
+            border: 1px solid gray;
+            text-decoration: none;
+        }
+        .content p {
+            color: gray;
+            margin-bottom: 10px; /* Reduced gap */
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0; /* Reduced padding */
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .stats div {
+            text-align: center;
+        }
+        .stats div p {
+            margin: 5px 0;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            flex: 1; /* Ensures it takes up available space */
+        }
+        .menu div {
+            text-align: center;
+        }
+        .menu img {
+            width: 100px; /* Adjusted size */
+            height: auto;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #eaeaea;
+        }
+        .footer button {
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer button:hover {
+            background-color: #0055cc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="profile-pic">
+            <img src="https://static.vecteezy.com/system/resources/previews/007/925/321/non_2x/handsome-happy-young-man-with-hand-in-the-pocket-smiling-waving-hand-cheerfully-saying-hi-hello-nice-to-meet-you-welcoming-people-with-informal-greeting-gesture-vector.jpg">
+        </div>
+    </div>
+    <div class="content">
+        <h2>
+            Vasanth
+            <a href="{{ url_for('verify') }}" class="verification-icon">&#10004;</a> <!-- Yellow tick mark -->
+        </h2>
+        <p>Chennai</p>
+    </div>
+    <div class="stats">
+        <div>
+            <p>81</p>
+            <p>Posts</p>
+        </div>
+        <div>
+            <p>432</p>
+            <p>Followers</p>
+        </div>
+        <div>
+            <p>143</p>
+            <p>Following</p>
+        </div>
+        <div>
+            <p>540</p>
+            <p>Visitors</p>
+        </div>
+    </div>
+    <div class="menu">
+        <div><img src="https://static.vecteezy.com/system/resources/previews/002/920/996/original/college-building-academic-building-university-in-traditional-english-style-with-trees-and-a-green-lawn-and-playground-illustration-on-white-background-free-vector.jpg" alt="Menu 1"></div>
+        <div><img src="https://www.wikihow.com/images/thumb/6/69/Tell-if-Your-Best-Guy-Friend-Likes-You-Step-10-Version-3.jpg/v4-460px-Tell-if-Your-Best-Guy-Friend-Likes-You-Step-10-Version-3.jpg" alt="Menu 2"></div>
+        <div><img src="https://e7.pngegg.com/pngimages/932/36/png-clipart-happy-family-illustration-family-child-father-parent-second-family-happy-family-child-hand.png" alt="Menu 3"></div>
+    </div>
+    <div class="footer">
+        <button>Sign out</button>
+    </div>
+</div>
+
+</body>
+</html>

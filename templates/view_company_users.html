@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Company Users</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- Roboto font from Google Fonts -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Roboto font */
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .table-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 80%;
+            text-align: center;
+            opacity: 0.8; /* Opacity for the whole container */
+        }
+        h2 {
+            color: #003366; /* Navy blue color for the title */
+            opacity: 0.8; /* Opacity for the title */
+            margin-bottom: 20px; /* Spacing below the title */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 10px;
+            text-align: left;
+            word-wrap: break-word; /* Allow text to wrap within cells */
+            max-width: 200px; /* Limit max width of the cell */
+            white-space: normal; /* Allow text to wrap to multiple lines */
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Alternating row background color */
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <h2>Company Table Users</h2>
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Encrypted UID</th>
+                <th>Status</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user[0] }}</td>
+                <td>{{ user[1] }}</td>
+                <td>{{ user[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
